@@ -20,7 +20,13 @@ repo_dicts = response['items']
 print(f"Repositories returned: {len(repo_dicts)}")
 
 # Examine first repository
-repo_dicts = repo_dicts[0]
+repo_dicts = repo_dicts[3]
 print(f"\nKeys: {len(repo_dicts)}")
 for key in sorted(repo_dicts.keys()):
     print(key)
+
+print("\nFirst repository information:")
+print(f"Name: {repo_dicts['name']}")
+print(f"Owner: {repo_dicts['owner']['login']}")
+print(f"Size: {repo_dicts['size']}")
+print(f"Stars: {repo_dicts['stargazers_count']}")
